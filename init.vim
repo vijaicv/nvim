@@ -14,6 +14,7 @@ set colorcolumn=90
 set nowrap
 set ic
 set relativenumber
+set mouse=a
 
 let g:ctrlp_custom_ignore = {
     \ 'dir': '\.git\|dist$\|.stack-work',
@@ -25,7 +26,7 @@ let g:NERDTreeWinSize=30
 
 let g:mkdp_auto_start = 0
 let g:mkdp_auto_close = 1
-
+let g:NERDTreeShowHidden = 1
 
 call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'vim-airline/vim-airline'
@@ -39,9 +40,12 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'neovimhaskell/haskell-vim'
     Plug 'nbouscal/vim-stylish-haskell'
+    Plug 'artanikin/vim-synthwave84'
+    Plug 'adrian5/oceanic-next-vim'
 call plug#end()
 
-colorscheme gruvbox
+colorscheme oceanicnext
 
 nnoremap <C-b> :NERDTreeToggle<CR>
+nnoremap <C-\> :CocOutline<CR>
 tnoremap <Esc> <C-\><C-n>
